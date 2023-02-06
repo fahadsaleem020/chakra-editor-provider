@@ -16,7 +16,7 @@
   "scripts": {
     "dev": "vite",
     "preview": "vite preview",
-    "build": "rollup -c",
+    "build": "rollup -c && npm pack --dry-run",
     "semantic-release": "semantic-release",
     "commit": "cz"
   },
@@ -57,5 +57,9 @@
     }
   },
   "module": "lib/index.esm.js",
-  "types": "lib/index.d.ts"
+  "types": "lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fahadsaleem020/retap-provider.git"
+  }
 }

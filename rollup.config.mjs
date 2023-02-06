@@ -27,9 +27,9 @@ export default defineConfig([
     ],
     external: ["@tiptap/react", "react"],
   },
-  {
-    input: pkg.module,
-    output: [{ file: pkg.types, format: "esm" }],
-    plugins: [dts(), terser()],
-  },
+  // {
+  //   input: pkg.module,
+  //   output: [{ file: pkg.types, format: "esm" }],
+  //   plugins: [dts(), terser()],
+  // },
 ]);

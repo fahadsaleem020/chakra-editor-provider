@@ -1,1 +1,6 @@
-import{useNodeMeta as e,useRetapDisclosure as r}from"@retap/hooks";import t,{createContext as a,useMemo as o,useContext as p}from"react";const i=a({}),s=({children:a})=>{const p=e(),s=e(),m=e(),n=r(),c=r(),d=o((()=>({retapDrawer:n,retapModal:c,youtube:p,image:s,video:m})),[s,p,m,c,n]);return t.createElement(i.Provider,{value:d},a)},m=()=>p(i);export{i as RetapContext,s as RetapProvider,m as useRetap};
+import { IRetapContext } from "@retap/types";
+import React, { PropsWithChildren, FC } from "react";
+declare const RetapContext: React.Context<IRetapContext>;
+declare const RetapProvider: FC<PropsWithChildren>;
+declare const useRetap: () => IRetapContext;
+export { RetapContext, RetapProvider, useRetap };
