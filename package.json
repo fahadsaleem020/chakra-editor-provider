@@ -21,13 +21,13 @@
     "commit": "cz"
   },
   "peerDependencies": {
-    "@retap/hooks": "^1.0.2",
-    "@retap/types": "^1.0.5",
+    "@retap/hooks": "^1.0.3",
+    "@retap/types": "^1.0.10",
     "react": "^18.2.0"
   },
   "devDependencies": {
-    "@retap/hooks": "^1.0.2",
-    "@retap/types": "^1.0.5",
+    "@retap/hooks": "^1.0.3",
+    "@retap/types": "^1.0.10",
     "@rollup/plugin-terser": "^0.4.0",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
