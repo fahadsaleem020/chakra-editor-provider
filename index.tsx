@@ -19,16 +19,16 @@ const RetapProvider: FC<PropsWithChildren> = ({ children }) => {
   const youtube = useNodeMeta<YoutubeNodeAttibutes>();
   const image = useNodeMeta<ImageNodeAttibutes>();
   const video = useNodeMeta<VideoNodeAttibutes>();
-  const Drawer = useRetapDisclosure();
-  const Modal = useRetapDisclosure();
+  const drawer = useRetapDisclosure();
+  const modal = useRetapDisclosure();
 
   const value: ProviderContext = useMemo(
     () => ({
       youtube,
       image,
       video,
-      Drawer,
-      Modal
+      drawer,
+      modal
     }),
     [image, youtube, video]
   );
