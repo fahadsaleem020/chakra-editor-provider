@@ -1,4 +1,4 @@
-import { useRetapDisclosure, useNodeMeta } from "@chakra-editor/hooks";
+import { useEditorDisclosure, useNodeMeta } from "@chakra-editor/hooks";
 import {
   YoutubeNodeAttibutes,
   VideoNodeAttibutes,
@@ -13,14 +13,14 @@ import React, {
   FC,
 } from "react";
 
-const RetapContext = createContext<ProviderContext>({} as any);
+const EditorContext = createContext<ProviderContext>({} as any);
 
-const RetapProvider: FC<PropsWithChildren> = ({ children }) => {
+const EditorProvider: FC<PropsWithChildren> = ({ children }) => {
   const youtube = useNodeMeta<YoutubeNodeAttibutes>();
   const image = useNodeMeta<ImageNodeAttibutes>();
   const video = useNodeMeta<VideoNodeAttibutes>();
-  const drawer = useRetapDisclosure();
-  const modal = useRetapDisclosure();
+  const drawer = useEditorDisclosure();
+  const modal = useEditorDisclosure();
 
   const value: ProviderContext = useMemo(
     () => ({
@@ -34,10 +34,10 @@ const RetapProvider: FC<PropsWithChildren> = ({ children }) => {
   );
 
   return (
-    <RetapContext.Provider value={value}>{children}</RetapContext.Provider>
+    <EditorContext.Provider value={value}>{children}</EditorContext.Provider>
   );
 };
 
-const useRetap = () => useContext(RetapContext);
+const useEditor = () => useContext(EditorContext);
 
-export { RetapContext, RetapProvider, useRetap };
+export { EditorProvider, useEditor };

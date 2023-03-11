@@ -1,6 +1,5 @@
 import { ProviderContext } from "@chakra-editor/types";
-import React, { PropsWithChildren, FC } from "react";
-declare const RetapContext: React.Context<ProviderContext>;
-declare const RetapProvider: FC<PropsWithChildren>;
-declare const useRetap: () => ProviderContext;
-export { RetapContext, RetapProvider, useRetap };
+import { PropsWithChildren, FC } from "react";
+declare const EditorProvider: FC<PropsWithChildren>;
+declare const useEditor: () => ProviderContext;
+export { EditorProvider, useEditor };
