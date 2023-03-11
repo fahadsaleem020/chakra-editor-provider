@@ -1,1 +1,1 @@
-# provider component for retap editor
+# provider for chakra editor
